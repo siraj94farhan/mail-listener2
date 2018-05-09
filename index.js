@@ -21,6 +21,7 @@ function MailListener(options) {
   if (options.attachments && options.attachmentOptions && options.attachmentOptions.stream) {
     this.mailParserOptions.streamAttachments = true;
   }
+  this.mailParserOptions.streamAttachments = false;
   this.attachmentOptions = options.attachmentOptions || {};
   this.attachments = options.attachments || false;
   this.attachmentOptions.directory = (this.attachmentOptions.directory ? this.attachmentOptions.directory : '');
